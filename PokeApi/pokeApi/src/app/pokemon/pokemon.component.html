@@ -1,1 +1,29 @@
-<p>pokemon works!</p>
+<div *ngFor="let pokemon of pokemons | async">
+    <p>{{pokemon.name}}</p>
+    <img [src]="pokemon.sprites.front_default" alt="">
+    <p>{{pokemon.id}}</p>
+</div>
+
+<!-- <table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>NumeroDex</th>
+            <th>Name</th>
+            <th>types</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pokemon of pokemons">
+            <td> <img [src]="pokemon.sprites.front_default" alt=""></td>
+            <td>{{pokemon.id}}</td>
+            <td>{{pokemon.name}}</td>
+            <td>{{pokemon.types}}</td>
+
+
+        </tr>
+
+    </tbody>
+
+
+</table> -->

@@ -16,11 +16,6 @@ export class PokemonComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
-    this.pokemonService.getPokemonList()
-    .pipe(mergeMap((pokemons) => this.pokemonService.getPokemonData(pokemons)))
-    .subscribe((resp) => {
-      console.log(resp);
-      this.pokemons = resp;
-    })
+    this.pokemons = this.pokemonService.getPokemonList()
   }
 }
