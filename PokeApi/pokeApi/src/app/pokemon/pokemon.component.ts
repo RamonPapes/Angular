@@ -18,4 +18,12 @@ export class PokemonComponent implements OnInit{
   ngOnInit(): void {
     this.pokemons = this.pokemonService.getPokemonList()
   }
+
+  convertTypes(types: any) {
+    let types_string = '';
+    let type_list = types.map((tps: any) => tps.type.name)
+    console.log(type_list)
+    type_list.forEach((type: string) => types_string += type + ' ') 
+    return types_string
+  }
 }

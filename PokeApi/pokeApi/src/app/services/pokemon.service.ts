@@ -9,7 +9,7 @@ export class PokemonService {
   //pokemonList: {name: any, types: any}[] = []
   pokemons = new BehaviorSubject<any>([]);
 
-  url = 'https://pokeapi.co/api/v2/pokemon';
+  url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
 
   constructor(private httpClient: HttpClient){}
 

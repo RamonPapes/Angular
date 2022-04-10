@@ -1,29 +1,24 @@
-<div *ngFor="let pokemon of pokemons | async">
+<!-- <div *ngFor="let pokemon of pokemons | async">
     <p>{{pokemon.name}}</p>
     <img [src]="pokemon.sprites.front_default" alt="">
     <p>{{pokemon.id}}</p>
-</div>
+</div> -->
 
-<!-- <table class="table table-stripped">
+<table class="table">
     <thead>
-        <tr>
-            <th>Image</th>
-            <th>NumeroDex</th>
-            <th>Name</th>
-            <th>types</th>
-        </tr>
+      <tr>
+          <th scope="col">Dex</th>
+          <th scope="col">Name</th>
+          <th scope="col">Types</th>
+          <th scope="col"> img</th>
+      </tr>
     </thead>
-    <tbody>
-        <tr *ngFor="let pokemon of pokemons">
-            <td> <img [src]="pokemon.sprites.front_default" alt=""></td>
-            <td>{{pokemon.id}}</td>
-            <td>{{pokemon.name}}</td>
-            <td>{{pokemon.types}}</td>
-
-
-        </tr>
-
+    <tbody *ngFor="let pokemon of pokemons | async">
+      <tr>
+          <td>{{pokemon.id}}</td>
+          <td> {{pokemon.name}}</td>
+          <td> {{convertTypes(pokemon.types)}}</td>
+          <img [src]="pokemon.sprites.front_default" alt="">
+      </tr>
     </tbody>
-
-
-</table> -->
+  </table>
