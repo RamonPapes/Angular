@@ -1,0 +1,7 @@
+<mat-list>
+  <mat-list-item> Título: {{filme.titulo}} </mat-list-item>
+  <mat-list-item> Data de Lançamento: {{filme.dtLancamento}} </mat-list-item>
+  <mat-list-item> Gênero: 1{{filme.genero}} </mat-list-item>
+  <mat-list-item> Descrição: {{filme.descricao}}</mat-list-item>
+  <img mat-card-image [src]="filme.urlFoto || semFoto" >
+</mat-list>
