@@ -15,13 +15,13 @@ const routes: Routes = [
   },
   {
     path: 'filmes',
-    children: [
+    children:[
       {
         path: '',
         component: ListagemFilmesComponent
       },
       {
-        path: ':id',
+        path: 'detalhes/:id',
         component: VisualizarFilmesComponent
       },
       {
