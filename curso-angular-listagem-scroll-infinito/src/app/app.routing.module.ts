@@ -24,9 +24,12 @@ const routes: Routes = [
         path: 'cadastro',
         children: [
           {
-            path: ':id',
+            path: '',
             component: CadastroFilmesComponent,
-            pathMatch: 'full'
+          },
+          {
+            path: ':id',
+            component: CadastroFilmesComponent
           }
         ]
       },
