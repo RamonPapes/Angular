@@ -1,0 +1,21 @@
+<nav class="main-menu">
+    <ul class="navbar-nav">
+      <div *ngFor="let item of menuItems">
+        <li *ngIf="item.position == 'top' && checkPermission('list', item.subject)" class="nav-item" [routerLinkActive]="['active']">
+          <a data-toggle="tooltip" title="{{item.label}}" [routerLink]="item.routerLink" (click)="menuClickEvent(item)">
+            <i class="{{ item.iconClass }}"></i>
+          </a>
+        </li>
+      </div>
+    </ul>
+  
+    <ul class="ul-bottom-icons navbar-nav">
+      <div *ngFor="let item of menuItems">
+        <li *ngIf="item.position == 'bottom' && checkPermission('list', item.subject)" class="nav-item" [routerLinkActive]="['active']">
+          <a data-toggle="tooltip" title="{{item.label}}" [routerLink]="item.routerLink" (click)="menuClickEvent(item)">
+            <i class="{{ item.iconClass }}"></i>
+          </a>
+        </li>
+      </div>
+    </ul> 
+</nav>
